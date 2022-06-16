@@ -1,0 +1,14 @@
+/* TEAM */
+Title: vite-boilerplate
+Site: https://web-site.com/
+
+/* SITE */
+Last Update: 2022/03/13
+Standard: HTML5, CSS3, JS
+Components: Vite
+Software: Nodejs
+Language: English
+Doctype: HTML5
+
+/* THANKS */
+Name:

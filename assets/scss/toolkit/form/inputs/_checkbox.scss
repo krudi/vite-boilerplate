@@ -1,0 +1,64 @@
+@use "../../abstracts/colors" as *;
+@use "../../abstracts/fonts" as *;
+
+.k-label-checkbox {
+	margin: 0 0 0.625rem 0;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	&-input {
+		width: 16px;
+		height: 16px;
+		margin: 0;
+		position: relative;
+		line-height: 0.875rem;
+		background-color: $k-white-100;
+		border: 1px solid $k-white-100;
+		border-radius: 0.25rem;
+		cursor: pointer;
+		transition: all ease-in-out 0.3s;
+		appearance: none;
+		&:focus {
+			outline: none;
+			&:indeterminate {
+				border-color: $k-white-100;
+			}
+		}
+		&:indeterminate {
+			border-color: $k-white-100;
+		}
+		&:checked {
+			background-color: $k-blue;
+			border-color: $k-blue;
+			box-shadow: 0 0 0 4px rgba($k-blue, 0.3);
+			&::after {
+				display: flex;
+				align-content: center;
+				justify-content: center;
+				color: $k-white;
+				content: "\2713";
+				font: {
+					size: $k-xxs;
+					weight: 700;
+				}
+			}
+		}
+		&:disabled {
+			opacity: 0.7;
+			pointer-events: none;
+		}
+		&:checked {
+			&[disabled],
+			&:disabled {
+				background-color: $k-blue;
+				opacity: 0.7;
+				pointer-events: none;
+			}
+		}
+	}
+	&-text {
+		margin: 0 0 0 0.625rem;
+		display: flex;
+		align-items: center;
+	}
+}

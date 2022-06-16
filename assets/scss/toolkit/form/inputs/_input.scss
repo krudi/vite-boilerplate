@@ -1,0 +1,101 @@
+@use "../../abstracts/colors" as *;
+@use "../../abstracts/fonts" as *;
+
+.k-input,
+.k-select,
+.k-datalist,
+.k-textarea {
+	width: 440px !important;
+	max-width: 100% !important;
+	margin: 0;
+	padding: 0.4375rem 1rem 0.4375rem 1rem;
+	background-color: $k-white;
+	display: block;
+	color: $k-grey;
+	line-height: inherit;
+	border: 1px solid $k-white-200;
+	border-radius: 0.25rem;
+	outline: none;
+	cursor: pointer;
+	appearance: none;
+	font: {
+		family: inherit;
+		size: $k-s;
+		weight: 400;
+	}
+	&[enabled],
+	&:enabled {
+		&:focus,
+		&:active {
+			color: $k-black;
+			border-color: $k-blue;
+			box-shadow: 0 0 0 4px rgba($k-blue, 0.3);
+			&::placeholder {
+				color: $k-black;
+			}
+		}
+		&:hover {
+			&::placeholder {
+				color: $k-black;
+			}
+		}
+	}
+	&[disabled],
+	&:disabled {
+		border-color: $k-red;
+		box-shadow: 0 0 0 4px rgba($k-red, 0.3);
+		opacity: 0.7;
+		pointer-events: none;
+	}
+	&::placeholder {
+		color: $k-grey;
+		opacity: 1;
+	}
+	&:focus,
+	&:active {
+		outline: none;
+		&:not(output) {
+			border-color: $k-red;
+		}
+	}
+}
+
+.k-input,
+.k-select,
+.k-textarea {
+	&[readonly],
+	&:read-only {
+		border-color: $k-blue;
+		box-shadow: 0 0 0 4px rgba($k-blue, 0.3);
+		opacity: 0.7;
+	}
+	&[required],
+	&:required {
+		background-image: radial-gradient($k-red, transparent 16%), radial-gradient($k-red, transparent 16%);
+		background-repeat: no-repeat;
+		background-position: right center;
+		background-size: 1.5rem 1.5rem;
+	}
+	&:focus,
+	&:active {
+		&:required {
+			background-image: none;
+		}
+	}
+}
+
+.k-input,
+.k-textarea {
+	&:-moz-ui-invalid:not(output) {
+		background-color: $k-white-100;
+		opacity: 1;
+	}
+}
+
+.k-input,
+.k-textarea {
+	&:invalid,
+	&:valid {
+		border-color: $k-white-200;
+	}
+}

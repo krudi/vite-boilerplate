@@ -1,0 +1,12 @@
+.k-input-color {
+	height: auto;
+	outline: none;
+	&::-moz-color-swatch {
+		height: 20px;
+		border-radius: 0.25rem;
+	}
+	&::-webkit-color-swatch {
+		height: 20px;
+		border-radius: 0.25rem;
+	}
+}

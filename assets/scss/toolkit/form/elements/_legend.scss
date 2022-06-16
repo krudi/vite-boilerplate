@@ -1,0 +1,9 @@
+@use "../../abstracts/colors" as *;
+
+.k-legend {
+	padding: 0;
+	color: $k-black;
+	font: {
+		weight: 500;
+	}
+}

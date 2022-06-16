@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as *;
+
+.k-details {
+	margin: 1rem 0 0 0;
+	padding: 1rem;
+	background-color: $k-white-200;
+	border-radius: 0.25rem;
+}
+
+.k-summary {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	font: {
+		weight: 500;
+	}
+	&::before,
+	&::after {
+		width: 12px;
+		height: 2px;
+		background-color: $k-black;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translateY(-50%);
+		content: "";
+	}
+	&::after {
+		transform: translateY(-50%) rotate(90deg);
+		[open] & {
+			transform: translateY(-50%) rotate(180deg);
+		}
+	}
+	&::-webkit-details-marker {
+		display: none;
+	}
+}

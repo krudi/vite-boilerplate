@@ -1,0 +1,11 @@
+@use "../config" as *;
+
+body {
+	@if $rtl-support {
+		direction: rtl;
+		unicode-bidi: embed;
+	} @else {
+		direction: ltr;
+		unicode-bidi: normal;
+	}
+}

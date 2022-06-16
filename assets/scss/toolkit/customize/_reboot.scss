@@ -1,0 +1,35 @@
+@use "../config" as *;
+
+html {
+	@if $html-smooth-scroll {
+		scroll-behavior: smooth;
+	} @else {
+		scroll-behavior: initial;
+	}
+}
+
+body {
+	color: $body-color;
+	line-height: $body-line-height;
+	background: $body-background;
+	font: {
+		family: $body-font-family;
+		weight: $body-font-weight;
+	}
+}
+
+::selection {
+	color: $selection-color;
+	background-color: $selection-background-color;
+}
+
+a {
+	color: $a-color;
+	text-decoration: $a-text-decoration;
+	&:hover,
+	&:focus,
+	&:active {
+		color: $a-hover-focus-active-color;
+		text-decoration: $a-hover-focus-active-text-decoration;
+	}
+}

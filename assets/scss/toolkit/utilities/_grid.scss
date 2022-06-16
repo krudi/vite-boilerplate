@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as *;
+
+.k-row {
+	margin: 0 0 1.25rem 0;
+	display: flex;
+	flex-wrap: wrap;
+	&:last-child {
+		margin: 0;
+	}
+}
+
+.k-col-p-0 {
+	padding: 0 !important;
+}
+
+@for $i from 1 through 12 {
+	.k-col-xs-#{$i},
+	.k-col-sm-#{$i},
+	.k-col-md-#{$i},
+	.k-col-lg-#{$i} {
+		width: 100%;
+		padding: 0.625rem;
+	}
+	.k-col-xs-#{$i} {
+		@include k-breakpoint("min-phone") {
+			width: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-sm-#{$i} {
+		@include k-breakpoint("min-tablet") {
+			width: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-md-#{$i} {
+		@include k-breakpoint("min-bigTablet") {
+			width: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-lg-#{$i} {
+		@include k-breakpoint("min-desktop") {
+			width: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-offset-xs-#{$i},
+	.k-col-offset-sm-#{$i},
+	.k-col-offset-md-#{$i},
+	.k-col-offset-lg-#{$i} {
+		margin-left: 0;
+	}
+	.k-col-offset-xs-#{$i} {
+		@include k-breakpoint("min-phone") {
+			margin-left: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-offset-sm-#{$i} {
+		@include k-breakpoint("min-tablet") {
+			margin-left: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-offset-md-#{$i} {
+		@include k-breakpoint("min-bigTablet") {
+			margin-left: calc(100% * (#{$i} / 12));
+		}
+	}
+	.k-col-offset-lg-#{$i} {
+		@include k-breakpoint("min-desktop") {
+			margin-left: calc(100% * (#{$i} / 12));
+		}
+	}
+}
