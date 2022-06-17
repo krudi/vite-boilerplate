@@ -3,13 +3,8 @@ module.exports = {
 		browser: true,
 		node: true
 	},
-	extends: [
-		'plugin:nuxt/recommended',
-		'plugin:vue/vue3-recommended'
-	],
-	plugins: [
-		'jest'
-	],
+	extends: ['plugin:nuxt/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
+	plugins: ['jest', 'prettier'],
 	parserOptions: {
 		parser: '@babel/eslint-parser',
 		allowImportExportEverywhere: true,
@@ -72,11 +67,8 @@ module.exports = {
 	rules: {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-		'quotes': [
-			2,
-			'single'
-		],
-		'camelcase': [
+		quotes: [2, 'single'],
+		camelcase: [
 			2,
 			{
 				ignoreDestructuring: true,
@@ -84,17 +76,11 @@ module.exports = {
 			}
 		],
 		'consistent-return': 'off',
-		'comma-dangle': [
-			'error',
-			'never'
-		],
-		'eqeqeq': 'off',
+		'comma-dangle': ['error', 'never'],
+		eqeqeq: 'off',
 		'import/no-cycle': 'off',
 		'import/no-dynamic-require': 'off',
-		'indent': [
-			'error',
-			'tab'
-		],
+		indent: ['error', 'tab'],
 		'no-tabs': 'off',
 		'no-else-return': 'off',
 		'no-nested-ternary': 'off',
@@ -123,23 +109,14 @@ module.exports = {
 		'no-use-before-define': 'off',
 		'no-trailing-spaces': 'off',
 		'object-curly-newline': 'off',
-		'semi': [
-			2,
-			'never'
-		],
+		semi: [2, 'never'],
 		'semi-style': 'off',
-		'space-before-function-paren': [
-			2,
-			'never'
-		],
+		'space-before-function-paren': [2, 'never'],
 		'vue/attribute-hyphenation': 'off',
 		'vue/attributes-order': 'off',
 		'vue/html-closing-bracket-newline': 'off',
 		'vue/html-closing-bracket-spacing': 'off',
-		'vue/html-indent': [
-			'error',
-			'tab'
-		],
+		'vue/html-indent': ['error', 'tab'],
 		'vue/multiline-html-element-content-newline': 'off',
 		'vue/no-v-html': 'off',
 		'vue/order-in-components': [
@@ -151,30 +128,17 @@ module.exports = {
 					'parent',
 					'inheritAttrs',
 					'functional',
-					[
-						'delimiters',
-						'comments'
-					],
-					[
-						'components',
-						'directives',
-						'filters'
-					],
+					['delimiters', 'comments'],
+					['components', 'directives', 'filters'],
 					'extends',
 					'mixins',
 					'model',
 					'layout',
-					[
-						'props',
-						'propsData'
-					],
+					['props', 'propsData'],
 					'LIFECYCLE_HOOKS',
 					'watch',
 					'data',
-					[
-						'template',
-						'render'
-					],
+					['template', 'render'],
 					'methods',
 					'computed',
 					'renderError'
