@@ -19,7 +19,7 @@
 		"lint:js:fix": "eslint --fix --ext .js,.vue .",
 		"lint:css": "stylelint .css,.scss .",
 		"lint:css:fix": "stylelint --fix .css,.scss .",
-        "lint:files": "npx prettier --write .",
+		"lint:files": "npx prettier --write .",
 		"test": "yarn jest"
 	},
 	"engines": {
@@ -56,6 +56,7 @@
 		"lint-staged": "^12.3.4",
 		"markdownlint": "^0.25.1",
 		"prettier": "^2.6.1",
+		"scss-kit-sctructure": "^1.0.2",
 		"stylelint-config-rational-order": "^0.1.2",
 		"stylelint-config-sass-guidelines": "^9.0.1",
 		"stylelint-no-unsupported-browser-features": "^5.0.3",
