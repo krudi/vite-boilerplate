@@ -6,22 +6,12 @@ module.exports = {
 		'stylelint-config-rational-order',
 		'stylelint-config-recommended-vue'
 	],
-	plugins: [
-		'stylelint-scss',
-		'stylelint-no-unsupported-browser-features'
-	],
-	'overrides': [
+	plugins: ['stylelint-scss', 'stylelint-no-unsupported-browser-features'],
+	overrides: [
 		{
-			'files': [
-				'*.vue',
-				'**/*.vue'
-			],
-			'rules': {
-				'unit-allowed-list': [
-					'em',
-					'rem',
-					's'
-				]
+			files: ['*.vue', '**/*.vue'],
+			rules: {
+				'unit-allowed-list': ['em', 'rem', 's']
 			}
 		}
 	],
@@ -83,32 +73,20 @@ module.exports = {
 			true,
 			{
 				ignore: ['custom-elements'],
-				ignoreTypes: [
-					'css-doodle',
-					'v-deep'
-				]
+				ignoreTypes: ['css-doodle', 'v-deep']
 			}
 		],
 		'selector-pseudo-element-no-unknown': [
 			true,
 			{
-				ignorePseudoElements: [
-					'v-deep',
-					'css-doodle'
-				]
+				ignorePseudoElements: ['v-deep', 'css-doodle']
 			}
 		],
 		'custom-property-empty-line-before': [
 			'always',
 			{
-				except: [
-					'after-comment',
-					'after-custom-property'
-				],
-				ignore: [
-					'after-comment',
-					'inside-single-line-block'
-				]
+				except: ['after-comment', 'after-custom-property'],
+				ignore: ['after-comment', 'inside-single-line-block']
 			}
 		],
 		'block-closing-brace-newline-before': ['always-multi-line'],
@@ -141,19 +119,13 @@ module.exports = {
 			'always',
 			{
 				except: ['after-single-line-comment'],
-				ignore: [
-					'after-comment',
-					'inside-block'
-				]
+				ignore: ['after-comment', 'inside-block']
 			}
 		],
 		'selector-no-qualifying-type': [
 			true,
 			{
-				ignore: [
-					'attribute',
-					'class'
-				]
+				ignore: ['attribute', 'class']
 			}
 		],
 		'at-rule-empty-line-before': [
@@ -171,10 +143,7 @@ module.exports = {
 		'declaration-empty-line-before': [
 			'always',
 			{
-				except: [
-					'after-comment',
-					'after-declaration'
-				]
+				except: ['after-comment', 'after-declaration']
 			}
 		],
 		'block-opening-brace-space-before': 'always',
@@ -188,10 +157,7 @@ module.exports = {
 		'block-closing-brace-newline-after': [
 			'always',
 			{
-				ignoreAtRules: [
-					'if',
-					'else'
-				]
+				ignoreAtRules: ['if', 'else']
 			}
 		],
 		'at-rule-name-space-after': 'always',

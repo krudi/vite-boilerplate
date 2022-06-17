@@ -18,9 +18,7 @@ export default defineNuxtConfig({
 	plugins: [
 		// Code
 	],
-	buildModules: [
-		'nuxt-purgecss'
-	],
+	buildModules: ['nuxt-purgecss'],
 	modules: [
 		// Code
 	],
@@ -76,22 +74,12 @@ export default defineNuxtConfig({
 			'~/assets/js/**/*.js'
 		],
 		styleExtensions: ['.css'],
-		whitelistPatterns: [
-			/svg.*/,
-			/fa.*/
-		],
-		whitelist: [
-			'body',
-			'html'
-		],
+		whitelistPatterns: [/svg.*/, /fa.*/],
+		whitelist: ['body', 'html'],
 		extractors: [
 			{
-				extractor: content => content.match(/[A-z0-9-:\\/]+/g) || [],
-				extensions: [
-					'html',
-					'vue',
-					'js'
-				]
+				extractor: (content) => content.match(/[A-z0-9-:\\/]+/g) || [],
+				extensions: ['html', 'vue', 'js']
 			}
 		]
 	}

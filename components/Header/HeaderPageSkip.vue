@@ -15,25 +15,27 @@
 	}
 </script>
 
-<style
-	lang="scss"
-	scoped
->
-	.header-page {
-		&-skip {
-			position: absolute;
-			left: 50%;
-			height: 3.125rem;
-			padding: 0 0.625rem 0 0.625rem 0;
-			color: $white !important;
-			line-height: 3.125rem;
-			background-color: $blue-100;
-			transform: translate(-50%, -100%);
-			transition: transform .3s;
-			&:active,
-			&:focus {
-				transform: translate(-50%, 10%);
-			}
-		}
-	}
+<style lang="scss" scoped>
+.header-page {
+    &-skip {
+
+        position: absolute;
+        left: 50%;
+        height: 3.125rem;
+        padding: 0 .625rem 0 .625rem 0;
+        color: $white !important;
+        line-height: 3.125rem;
+        background-color: $blue-100;
+        transform: translate( -50%, -100% );
+        transition: transform .3s;
+        &:active,
+        &:focus {
+
+            transform: translate( -50%, 10% );
+
+        }
+
+    }
+
+}
 </style>

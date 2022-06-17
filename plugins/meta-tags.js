@@ -1,4 +1,4 @@
-const metaTags = data => {
+const metaTags = (data) => {
 	const { title } = data
 	return {
 		title,
@@ -24,7 +24,8 @@ const metaTags = data => {
 			},
 			{
 				name: 'description',
-				content: 'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
+				content:
+                    'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
 			},
 			{
 				name: 'keywords',
@@ -80,7 +81,8 @@ const metaTags = data => {
 			},
 			{
 				property: 'og:description',
-				content: 'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
+				content:
+                    'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
 			},
 			{
 				name: 'twitter:card',
@@ -88,7 +90,8 @@ const metaTags = data => {
 			},
 			{
 				name: 'twitter:title',
-				content: 'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
+				content:
+                    'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
 			},
 			{
 				name: 'twitter:url',
@@ -100,7 +103,8 @@ const metaTags = data => {
 			},
 			{
 				name: 'twitter:description',
-				content: 'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
+				content:
+                    'A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite'
 			},
 			{
 				name: 'twitter:site',

@@ -18,16 +18,13 @@
 	}
 </script>
 
-<style
-	lang="scss"
-	scoped
->
-	.header-page {
+<style lang="scss" scoped>
+.header-page {
 
-		position: sticky;
-		top: 0;
-		z-index: 50;
-		background-color: $white;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: $white;
 
-	}
+}
 </style>

@@ -8,9 +8,5 @@ module.exports = {
 		'^.+\\.vue$': '@vue/vue3-jest',
 		'^.+\\js$': 'babel-jest'
 	},
-	moduleFileExtensions: [
-		'vue',
-		'js',
-		'json'
-	]
+	moduleFileExtensions: ['vue', 'js', 'json']
 }
