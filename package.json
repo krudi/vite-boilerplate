@@ -1,31 +1,57 @@
 {
     "name": "vite-boilerplate",
     "description": "A boilerplate with Vue3, Nuxt3, SASS and technology such as Vite",
-    "license": "MIT",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/krudi/vite-boilerplate/LICENSE/"
+        }
+    ],
     "version": "1.0.0",
-    "author": "authors",
-    "private": true,
+    "authors": [
+        {
+            "name": "authors",
+            "email": "example@mail.com",
+            "url": "https://github.com/krudi/vite-boilerplate/"
+        }
+    ],
+    "private": false,
+    "main": "nuxt.config.js",
+    "homepage": "https://github.com/krudi/vite-boilerplate#readme/",
     "bugs": {
         "url": "https://github.com/krudi/vite-boilerplate/issues/"
     },
     "keywords": [
         "boilerplate"
     ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/krudi/vite-boilerplate.git"
+    },
+    "funding": [
+        {
+            "type" : "individual",
+            "url" : "http://example.com/donate/"
+        }
+    ],
+    "files": [
+        "dist/{css,js}/*.{css,js,map}",
+        "js/{src,dist}/**/*.{js,map}"
+    ],
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    },
     "scripts": {
         "dev": "nuxi dev && lint",
         "watch": "node .output/server/index.mjs",
-        "prod": "nuxi build && yarn test && yarn lint-fix",
+        "prod": "nuxi build",
         "lint:js": "eslint --ext .js,.vue pages/ components/ assets/js",
         "lint:js:fix": "eslint --ext .js,.vue --fix pages/ components/",
         "lint:css": "stylelint .css,.scss,.vue pages/ components/ assets/js",
         "lint:css:fix": "stylelint .css,.scss,.vue --fix pages components assets/scss",
         "lint:files": "npx prettier --write .",
-        "lint": "yarn lint:js && yarn lint:css",
-        "lint-fix": "yarn lint:js:fix && yarn lint:css:fix",
         "test": "yarn jest"
-    },
-    "engines": {
-        "node": "^14.16.0 || ^16.11.0 || ^17.0.0"
     },
     "devDependencies": {
         "@babel/eslint-parser": "^7.17.0",
