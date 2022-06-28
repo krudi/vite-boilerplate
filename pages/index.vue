@@ -3,6 +3,7 @@
 		id="page-index"
 		class="page-index">
 		<span class="page-index-title">Page: index.vue</span>
+		<k-button>wqdqwddw</k-button>
 	</main>
 </template>
 

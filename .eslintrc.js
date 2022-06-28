@@ -3,7 +3,7 @@ module.exports = {
 		browser: true,
 		node: true
 	},
-	extends: ['plugin:nuxt/recommended', 'plugin:vue/vue3-recommended', 'prettier'],
+	extends: ['plugin:nuxt/recommended', 'plugin:vue/vue3-recommended', 'prettier', 'plugin:storybook/recommended'],
 	plugins: ['jest', 'prettier'],
 	parserOptions: {
 		parser: '@babel/eslint-parser',
@@ -45,20 +45,17 @@ module.exports = {
 		ThrowPropsPlugin: false,
 		BezierPlugin: false
 	},
-	overrides: [
-		{
-			files: ['*.js'],
-			rules: {
-				'vue/script-indent': 'off'
-			}
-		},
-		{
-			files: ['*.vue'],
-			rules: {
-				indent: 'off'
-			}
+	overrides: [{
+		files: ['*.js'],
+		rules: {
+			'vue/script-indent': 'off'
 		}
-	],
+	}, {
+		files: ['*.vue'],
+		rules: {
+			indent: 'off'
+		}
+	}],
 	settings: {
 		jest: {
 			version: require('jest/package.json').version
@@ -68,13 +65,10 @@ module.exports = {
 		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
 		quotes: [2, 'single'],
-		camelcase: [
-			2,
-			{
-				ignoreDestructuring: true,
-				properties: 'never'
-			}
-		],
+		camelcase: [2, {
+			ignoreDestructuring: true,
+			properties: 'never'
+		}],
 		'consistent-return': 'off',
 		'comma-dangle': ['error', 'never'],
 		eqeqeq: 'off',
@@ -84,28 +78,17 @@ module.exports = {
 		'no-tabs': 'off',
 		'no-else-return': 'off',
 		'no-nested-ternary': 'off',
-		'no-param-reassign': [
-			2,
-			{
-				props: false
-			}
-		],
+		'no-param-reassign': 'off',
 		'no-return-assign': 'off',
 		'no-underscore-dangle': 'off',
-		'no-unused-expressions': [
-			2,
-			{
-				allowTernary: true
-			}
-		],
-		'no-unused-vars': [
-			2,
-			{
-				args: 'after-used',
-				argsIgnorePattern: 'commit',
-				ignoreRestSiblings: true
-			}
-		],
+		'no-unused-expressions': [2, {
+			allowTernary: true
+		}],
+		'no-unused-vars': [2, {
+			args: 'after-used',
+			argsIgnorePattern: 'commit',
+			ignoreRestSiblings: true
+		}],
 		'no-use-before-define': 'off',
 		'no-trailing-spaces': 'off',
 		'object-curly-newline': 'off',
@@ -119,44 +102,18 @@ module.exports = {
 		'vue/html-indent': ['error', 'tab'],
 		'vue/multiline-html-element-content-newline': 'off',
 		'vue/no-v-html': 'off',
-		'vue/order-in-components': [
-			2,
-			{
-				order: [
-					'el',
-					'name',
-					'parent',
-					'inheritAttrs',
-					'functional',
-					['delimiters', 'comments'],
-					['components', 'directives', 'filters'],
-					'extends',
-					'mixins',
-					'model',
-					'layout',
-					['props', 'propsData'],
-					'LIFECYCLE_HOOKS',
-					'watch',
-					'data',
-					['template', 'render'],
-					'methods',
-					'computed',
-					'renderError'
-				]
-			}
-		],
+		'vue/order-in-components': [2, {
+			order: ['el', 'name', 'parent', 'inheritAttrs', 'functional', ['delimiters', 'comments'], ['components', 'directives', 'filters'], 'extends', 'mixins', 'model', 'layout', ['props', 'propsData'], 'LIFECYCLE_HOOKS', 'watch', 'data', ['template', 'render'], 'methods', 'computed', 'renderError']
+		}],
 		'vue/require-component-is': 'off',
+		'vue/require-default-prop': 'off',
 		'vue/require-prop-types': 'off',
 		'vue/component-definition-name-casing': 'off',
 		'vue/multi-word-component-names': 'off',
-		'vue/script-indent': [
-			'error',
-			'tab',
-			{
-				baseIndent: 1,
-				switchCase: 1,
-				ignores: []
-			}
-		]
+		'vue/script-indent': ['error', 'tab', {
+			baseIndent: 1,
+			switchCase: 1,
+			ignores: []
+		}]
 	}
 }
